@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pushd /root/epics/iocs/motor/iocSim
+/root/epics/modules/motor/bin/linux-x86_64/WithAsyn st.cmd.unix
+popd

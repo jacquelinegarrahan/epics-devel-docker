@@ -1,0 +1,13 @@
+record(seq, "linkX")
+{
+	field(DESC, "Link to X Start on camera")
+	field(DOL1, "IOC:m1.RBV CP")
+	field(LNK1, "13SIM1:cam1:PeakStartX CA PP")
+}
+
+record(seq, "linkY")
+{
+	field(DESC, "Link to Y Start on camera")
+	field(DOL1, "IOC:m2.RBV CP")
+	field(LNK1, "13SIM1:cam1:PeakStartY CA PP")
+}

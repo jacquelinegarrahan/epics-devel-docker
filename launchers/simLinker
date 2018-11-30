@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pushd /root/epics/iocs/linker
+/root/epics/base/bin/linux-x86_64/softIoc -d linker.db
+popd

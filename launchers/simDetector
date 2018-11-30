@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pushd /root/epics/iocs/areaDetector/iocSimDetector
+/root/epics/modules/areaDetector/ADSimDetector/bin/linux-x86_64/simDetectorApp st.cmd
+popd
