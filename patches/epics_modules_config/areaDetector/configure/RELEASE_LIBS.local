@@ -7,6 +7,7 @@
 #  Any modules which should come from the Debian package should be commented out, except for EPICS_BASE.
 #  For example to use a newer version of asyn and areaDetector then define ASYN, AREA_DETECTOR, ADCORE,
 #  and ADSUPPORT here.  To use the Debian version of asyn then comment out ASYN here.
+SUPPORT=/root/epics/modules
 
 # If you don't want to install into $(TOP) then
 # define INSTALL_LOCATION_APP here

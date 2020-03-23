@@ -11,6 +11,7 @@
 # If you don't want to install into $(TOP) then
 # define INSTALL_LOCATION_APP here
 #INSTALL_LOCATION_APP=<fullpathname>
+SUPPORT=/root/epics/modules
 
 # ASYN is needed for base classes
 ASYN=$(SUPPORT)/asyn
@@ -35,7 +36,7 @@ BUSY=$(SUPPORT)/busy
 CALC=$(SUPPORT)/calc
 
 # SNCSEQ is needed if CALC was built with SNCSEQ support (see CALC/configure/RELEASE)
-#SNCSEQ=$(SUPPORT)/seq-2-2-5
+SNCSEQ=$(SUPPORT)/seq
 
 # SSCAN is needed for scanning threshold on Pilatus and general scanning.
 # SSCAN also provides support needed for the swait record in CALC
