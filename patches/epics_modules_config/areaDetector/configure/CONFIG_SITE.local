@@ -25,6 +25,7 @@ BUILD_IOCS=YES
 
 # BOOST is required for the ADCore/pluginTests unit tests
 WITH_BOOST     = NO
+BOOST_EXTERNAL = NO
 #BOOST_LIB     =
 #BOOST_INCLUDE =
 
@@ -46,6 +47,11 @@ WITH_BLOSC     = YES
 BLOSC_EXTERNAL = NO
 #BLOSC_INCLUDE =
 #BLOSC_LIB     =
+
+# BITSHUFFLE is required to use the bitshuffle/LZ4 decompressors in the ADEiger driver
+# It can also be used to generate shareable libraries for the HDF5 compressor/decompressor
+WITH_BITSHUFFLE     = YES
+BITSHUFFLE_EXTERNAL = NO
 
 # GraphicsMagick is required for NDFileMagick and the URL driver.
 WITH_GRAPHICSMAGICK     = NO
@@ -83,8 +89,8 @@ NEXUS_EXTERNAL = NO
 #NEXUS_LIB     =
 
 # OPENCV is required for the ADPluginEdge plugin
-WITH_OPENCV     = NO
-OPENCV_EXTERNAL = YES
+WITH_OPENCV     = YES
+OPENCV_EXTERNAL = NO
 #OPENCV_INCLUDE =
 #OPENCV_LIB     =
 
@@ -112,13 +118,3 @@ WITH_ZLIB     = YES
 ZLIB_EXTERNAL = NO
 #ZLIB_INCLUDE =
 #ZLIB_LIB     =
-
-# Blosc is required for the new compression stuff
-WITH_BLOSC=YES
-BLOSC_EXTERNAL=NO
-
-# The definitions above can be overridden in the following files.
-# The files are searched in this order, with the last definition being used.
-#    CONFIG_SITE.local.$(OS_CLASS)
-#    CONFIG_SITE.local.$(EPICS_HOST_ARCH)
-#    CONFIG_SITE.local.$(EPICS_HOST_ARCH).$(T_A)
