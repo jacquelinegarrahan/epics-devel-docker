@@ -38,6 +38,7 @@ ENV AUTOSAVE_VERSION master
 ENV CALC_VERSION master
 ENV BUSY_VERSION master
 ENV MOTOR_VERSION master
+ENV CAPUTLOG_VERSION master
 
 # asyn
 WORKDIR /root/sandbox/epics/modules
@@ -75,6 +76,13 @@ RUN wget http://www-csr.bessy.de/control/SoftDist/sequencer/releases/seq-2.2.8.t
 WORKDIR seq
 RUN echo "EPICS_BASE=$EPICS_BASE_LOCATION" > configure/RELEASE
 RUN make -j8 install STATIC_BUILD=YES INSTALL_LOCATION=$MODULES_DIR/seq
+
+# caPutLog
+WORKDIR /root/sandbox/epics/modules
+RUN git clone --depth=1 --recursive --branch $CAPUTLOG_VERSION https://github.com/epics-modules/caPutLog.git
+WORKDIR caPutLog
+RUN echo "EPICS_BASE=$EPICS_BASE_LOCATION" > configure/RELEASE
+RUN make -j8 install STATIC_BUILD=YES INSTALL_LOCATION=$MODULES_DIR/caPutLog
 
 # motor
 WORKDIR /root/sandbox/epics/modules

@@ -1,4 +1,1 @@
-
-# EPICS Development Docker
-
-A docker image with Epics Base, Modules and Simulated IOCs.
+Builds off of @hhslepicka's docker image (https://github.com/hhslepicka/epics-devel-docker)... Adds caputlog
